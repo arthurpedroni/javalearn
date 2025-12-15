@@ -30,15 +30,24 @@ public class Main
 	}
 
 	public static void main(String[] args) {
-		int[] v = new int[10];
 		int opcao = 1;
 		switch (opcao) {
-		case 1:
-			System.out.println(1);
+			case 1:{
+				int[] v = new int[10];
+				v = ler(v);
+				int ele = ex1(v);
+				System.out.println("O que mais aparece C) " + ele);
+				break;
+			}
+			case 2:{
+				int[] v = new int[10];
+				v = ler(v);
+				int ele = ex1(v);
+				System.out.println("O que mais aparece C) " + ele);
+				break;
+			}
 		}
 
-		v = ler(v);
-		int ele = ex1(v);
-		System.out.println("O que mais aparece C) " + ele);
+		
 	}
 }
