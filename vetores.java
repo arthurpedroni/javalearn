@@ -1,7 +1,6 @@
 import java.util.Scanner;
-public class Main
+public class vetores
 {
-
 
 	public static int[] ler(int[] v) {
 		Scanner s = new Scanner(System.in);
@@ -11,9 +10,9 @@ public class Main
 		return v;
 	}
 
-	public static int ex1(int[] v) {
+	public static int maiorqtd(int[] v) {
 		int mais = 0;
-		int ele = 0;
+		int resultado = 0;
 		for(int x = 0; x < 10; x++) {
 			int cont = 0;
 			for(int i = 0; i < 10; i++) {
@@ -22,28 +21,34 @@ public class Main
 				}
 			}
 			if(mais < cont) {
-				ele = v[x];
+				resultado = v[x];
 				mais = cont;
 			}
 		}
-		return ele;
+		return resultado;
 	}
-
+	public static int verNumNaoDig(int[] v) {
+		Scanner s = new Scanner(System.in);
+		int[] num = {1,2,3,4,5,6,7,8,9,10};
+		do { 
+		
+		} while ();
+	}
 	public static void main(String[] args) {
-		int opcao = 1;
+		int opcao = 2;
 		switch (opcao) {
 			case 1:{
 				int[] v = new int[10];
 				v = ler(v);
-				int ele = ex1(v);
-				System.out.println("O que mais aparece C) " + ele);
+				int resultado = maiorqtd(v);
+				System.out.println("O que mais aparece é " + resultado);
 				break;
 			}
 			case 2:{
 				int[] v = new int[10];
 				v = ler(v);
-				int ele = ex1(v);
-				System.out.println("O que mais aparece C) " + ele);
+				int resultado = verNumNaoDig(v);
+				System.out.println("O que mais aparece é " + resultado);
 				break;
 			}
 		}
