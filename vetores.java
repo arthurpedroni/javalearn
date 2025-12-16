@@ -27,17 +27,29 @@ public class vetores
 		}
 		return resultado;
 	}
-	public static int verNumNaoDig(int[] v) {
+	public static int[] verNumNaoDig() {
 		Scanner s = new Scanner(System.in);
-		int[] num = {1,2,3,4,5,6,7,8,9,10};
-		do { 
-		
-		} while ();
+		int[] num = {0,0,0,0,0,0,0,0,0,0};
+		int[] resultado = new int[10];
+		int n = s.nextInt();
+		while(n > 0){
+			num[n - 1] = 1;
+			n = s.nextInt();
+		}
+		int cont = 0;
+		for(int x = 0;x < resultado.length;x++){
+			if(num[x] == 0){
+				resultado[cont] = x + 1;
+				cont++;
+			}
+		}
+		return resultado;	
 	}
 	public static void main(String[] args) {
 		int opcao = 2;
 		switch (opcao) {
 			case 1:{
+				System.out.println("Elemento que mais aparece no vetor");
 				int[] v = new int[10];
 				v = ler(v);
 				int resultado = maiorqtd(v);
@@ -45,10 +57,11 @@ public class vetores
 				break;
 			}
 			case 2:{
-				int[] v = new int[10];
-				v = ler(v);
-				int resultado = verNumNaoDig(v);
-				System.out.println("O que mais aparece é " + resultado);
+				System.out.println("Digite números entre 1 e 10. Digite um número negativo para encerrar.");
+				int[] resultado = verNumNaoDig();
+				for(int x = 0;resultado[x] != 0;x++){
+					System.out.println("Números não digitados: " + resultado[x]);
+				}
 				break;
 			}
 		}
