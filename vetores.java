@@ -90,7 +90,7 @@ public class vetores
 			case 2:{
 				System.out.println("Digite números entre 1 e 10. Digite um número negativo para encerrar.");
 				int[] resultado = verNumNaoDig();
-				for(int x = 0;resultado[x] != 0;x++){
+				for(int x = 0;resultado[x] != 0 && resultado.length;x++){
 					System.out.println("Números não digitados: " + resultado[x]);
 				}
 				break;
