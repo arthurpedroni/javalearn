@@ -18,4 +18,12 @@ public class Product {
         quantity -= remove;
     }
 
+    public String toString(){
+        return "Product data:\nName: "
+        + name + ", $"
+        + price +", "
+        + quantity+" units, Total: $"
+        + totalValueInStock();
+    }
+
 }
