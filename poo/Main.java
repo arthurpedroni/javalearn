@@ -1,24 +1,27 @@
 import entities.*;
-
+import java.util.Scanner;
 public class Main {
         public static void main(String[] args) {
-        Product p = new Product();
-        p.name = "Dipirona";
-        p.price = 60.0;
-        p.quantity = 120;
-        int add = 34;
-        int remove = 74;
+            Scanner sc = new Scanner(System.in);
+            Product p = new Product();
+            p.name = "Dipirona";
+            p.price = 100.0;
+            p.quantity = 120;
 
-        System.out.println(p);
-
-        p.addProducts(add);
-    
-        System.out.println(p);
+            System.out.println(p);
+            
+            System.out.print("\nEnter the quantity to be added: ");
+            int add = sc.nextInt();
+            p.addProducts(add);
         
-        p.removeProducts(remove);
+            System.out.println("\n"+p);
+            
+            System.out.print("\nEnter the quantity to be removed: ");
+            int remove = sc.nextInt();
+            p.removeProducts(remove);
 
-        System.out.println(p);
-
+            System.out.println("\n"+p);
+            sc.close();
 
     }
 }
