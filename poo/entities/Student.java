@@ -8,13 +8,14 @@ public class Student {
 
     public String toString(){
         
-        if((grade1 + grade2 + grade3) >= 60.0) {
-            return "FINAL GRADE: "+ (grade1 + grade2 + grade3)
+        double sum = grade1 + grade2 + grade3;
+        if(sum >= 60.0) {
+            return "FINAL GRADE: "+ sum
             +"\nPASS";
         }
         else{
-            return "FINAL GRADE: "+ (grade1 + grade2 + grade3)
-            +"\nFAILED\nMISSING "+ (60.0 - (grade1 + grade2 + grade3))
+            return "FINAL GRADE: "+ sum
+            +"\nFAILED\nMISSING "+ (60.0 - sum)
             +" POINTS";
         }
     }
