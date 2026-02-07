@@ -1,6 +1,7 @@
-import entities.Rectangle;
+package conteudos.introdutorio;
+import conteudos.introdutorio.entities.Rectangle;
 
-public class ex1 {
+public class RectangleApp {
     public static void main(String[] args) {
         Rectangle r = new Rectangle();
         r.width = 16.0;

@@ -1,5 +1,7 @@
-import entities.Employee;
-public class ex2 {
+package conteudos.introdutorio;
+import conteudos.introdutorio.entities.Employee;
+
+public class EmployeeApp {
     
     public static void main(String[] args) {
         Employee e = new Employee();

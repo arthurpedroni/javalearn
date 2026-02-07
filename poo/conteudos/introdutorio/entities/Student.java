@@ -1,4 +1,4 @@
-package entities;
+package conteudos.introdutorio.entities;
 
 public class Student {
 
